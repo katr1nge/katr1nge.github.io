@@ -1,0 +1,75 @@
+
+body{
+    color:white;
+    background-color: #171717;
+}
+.bg-vdrk {
+    background-color: #151515;
+}
+.bg-vdrl{
+    background: linear-gradient(90.54deg, #1E1E1E 24.35%, #171717 98.17%);
+}
+.bg-vdrlg{
+    background-color: #343434;
+}
+.topo {
+    height: 28px;
+    width: 100%;
+}
+.scll path {
+    scale: 80%;
+    height: 80%;
+}
+.welc{
+    background-image: url("../img/Backg.png");
+    height: 100vh;
+	background-size: cover;
+	background-position: center center;
+}
+.socials{
+    flex-direction: row;
+}
+.textbar-1{
+    position: relative;
+    min-width: 100%;
+    max-width: 100%;
+}
+.whyeneida2{
+    height: 90px;
+}
+.donate{
+    font-size: 24px;
+}
+.footeer{
+    font-size: 14px;
+}
+.bg-vdrl .justify-content-center .scll{
+    background-color: #151515;
+}
+.donators{
+    height: 695px;
+    width: 100%;
+    background: linear-gradient(132.7deg, #343434 -36.64%, #171717 63.62%);
+}
+.whyeneida{
+    height: 377px;
+    background: #1E1E1E;
+}
+footer{
+    height: 174px;
+}
+.cardsss{
+border-radius: 16px;
+width: 100%;
+height: 274px;
+font-size: 20px;
+}
+.cdc-1{
+background: #30221B;
+}
+.cdc-2{
+background: #222E2D;
+}
+.cdc-3{
+background: #2B2022;
+}
