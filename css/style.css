@@ -351,12 +351,12 @@ body a .active {
   padding-top: 12vh;
 }
 .welc .subtext-welc {
-  padding-top: 5vh;
+  padding-top: clamp(1px, 5vh, 10px);
   padding-right: 45vw;
   font-size: clamp(10px, 1.5vw, 20px);
 }
 .welc .ip {
-  margin: 5vh 1vw 3vh 0vw;
+  margin: clamp(1px, 2vh, 24px) 1vw clamp(1px, 2vh, 24px) 0vw;
   color: white;
   font-size: clamp(15px, 2vw, 24px);
   background: #151515;
@@ -383,7 +383,7 @@ body a .active {
 .welc .eneida-version {
   color: rgba(255, 255, 255, 0.75);
   font-size: 1vw;
-  font-size: clamp(14px, 1vw, 24px);
+  font-size: clamp(14px, 1vw, 18px);
   letter-spacing: 0.2em;
   padding-bottom: 10vh;
 }
@@ -523,12 +523,36 @@ footer .footer_links div {
     border-radius: 50%;
     background: #0066CC;
     filter: blur(137px);
-    left: -50%;
+    left: -20%;
     top: 50%;
-    z-index: 2;
+    z-index: 5;
   }
 }
 @media (max-width: 520px) {
+  .round-b {
+    position: absolute;
+    width: 15vh;
+    height: 15vh;
+    border-radius: 50%;
+    background: #0066CC;
+    filter: blur(37px);
+    right: -10%;
+    overflow: hidden;
+    bottom: 20%;
+    z-index: 2;
+  }
+  .round-l {
+    position: absolute;
+    width: 15vh;
+    height: 15vh;
+    border-radius: 50%;
+    background: rgba(255, 247, 0, 0.9);
+    filter: blur(37px);
+    left: -10%;
+    overflow: hidden;
+    top: 20%;
+    z-index: 2;
+  }
   .navbar {
     padding-left: 1vw;
   }
@@ -546,6 +570,7 @@ footer .footer_links div {
     background-repeat: no-repeat;
     height: auto;
     width: 100%;
+    overflow: hidden;
     background-size: cover;
   }
   .welc .headtxt {
