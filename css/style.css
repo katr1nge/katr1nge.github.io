@@ -108,6 +108,7 @@ body a .active {
   width: 100%;
   background: #1E1E1E;
   display: inline-block;
+  overflow: hidden;
 }
 .whyeneida .mimr {
   display: flex;
@@ -126,6 +127,10 @@ body a .active {
 .cdc-1 .col-8 {
   font-size: 23px;
 }
+.cdc-1:hover {
+  background: #462d21;
+  box-shadow: 5px 5px 5px 5px #30221B;
+}
 .cdc-2 {
   background: #222E2D;
   display: inline-block;
@@ -134,6 +139,10 @@ body a .active {
 .cdc-2 .col-8 {
   font-size: 23px;
 }
+.cdc-2:hover {
+  background: rgba(37, 88, 85, 0.7647058824);
+  box-shadow: 5px 5px 5px 5px #222E2D;
+}
 .cdc-3 {
   background: #2B2022;
   display: inline-block;
@@ -141,6 +150,10 @@ body a .active {
 }
 .cdc-3 .col-8 {
   font-size: 23px;
+}
+.cdc-3:hover {
+  background: rgba(97, 55, 64, 0.6117647059);
+  box-shadow: 5px 5px 5px 5px #2B2022;
 }
 
 .nickbox {
@@ -181,77 +194,51 @@ body a .active {
   background: linear-gradient(132.7deg, #343434 -36.64%, #171717 63.62%);
 }
 
-.doncard-1 {
+.doncard {
   width: 250px;
   height: 350px;
-  background: rgb(0, 48, 15) padding-box, linear-gradient(to right, darkblue, darkorchid) border-box;
   border: 16px solid transparent;
   -webkit-backdrop-filter: blur(21px);
           backdrop-filter: blur(21px);
   border-radius: 16px;
+  background: linear-gradient(152.97deg, rgba(21, 21, 21, 0.2) 0%, rgba(225, 196, 196, 0) 100%);
   text-align: center;
   font-size: 20px;
   padding-top: 32px;
+}
+.doncard .mcblock {
+  display: flex;
+  justify-content: center;
+  padding-top: 21px;
+}
+.doncard img {
+  width: 144px;
+  height: 144px;
+  text-align: center;
+}
+.doncard .price {
+  padding-top: 26px;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+.doncard .clicktobuy {
+  padding-top: 8px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+  text-align: center;
+  padding-bottom: 2vw;
+}
+.doncard:hover {
+  background: linear-gradient(152.97deg, rgba(61, 61, 61, 0.2) 0%, rgba(225, 196, 196, 0) 100%);
+}
+.doncard-1 {
   border: 1px solid rgba(25, 107, 125, 0.8);
 }
-.doncard-1 .mcblock {
-  display: flex;
-  justify-content: center;
-  padding-top: 21px;
-}
-.doncard-1 img {
-  width: 144px;
-  height: 144px;
-  text-align: center;
-}
-.doncard-1 .price {
-  padding-top: 26px;
-  color: rgba(255, 255, 255, 0.75);
-  letter-spacing: 2px;
-  font-size: 14px;
-}
-.doncard-1 .clicktobuy {
-  padding-top: 8px;
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 14px;
-  text-align: center;
-  padding-bottom: 2vw;
-}
 .doncard-2 {
-  width: 250px;
-  height: 350px;
-  background: linear-gradient(152.97deg, rgba(21, 21, 21, 0.2) 0%, rgba(21, 21, 21, 0) 100%);
-  -webkit-backdrop-filter: blur(21px);
-          backdrop-filter: blur(21px);
-  border-radius: 16px;
-  text-align: center;
-  font-size: 20px;
-  padding-top: 32px;
   border: 1px solid rgba(25, 125, 57, 0.8);
 }
-.doncard-2 .mcblock {
-  display: flex;
-  justify-content: center;
-  padding-top: 21px;
-}
-.doncard-2 img {
-  width: 144px;
-  height: 144px;
-  text-align: center;
-}
-.doncard-2 .price {
-  padding-top: 26px;
-  color: rgba(255, 255, 255, 0.75);
-  letter-spacing: 2px;
-  font-size: 14px;
-}
-.doncard-2 .clicktobuy {
-  padding-top: 8px;
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 14px;
-  text-align: center;
-  padding-bottom: 2vw;
-}
+
 .nb_text {
   padding-bottom: 46px;
 }
@@ -421,6 +408,28 @@ footer .footer_links div {
 }
 
 @media (min-width: 521px) and (max-width: 991px) {
+  .round-b {
+    position: absolute;
+    width: 30vh;
+    height: 30vh;
+    border-radius: 50%;
+    background: #0066CC;
+    filter: blur(10vw);
+    left: 0;
+    bottom: -15%;
+    z-index: 3;
+  }
+  .round-l {
+    position: absolute;
+    width: 30vh;
+    height: 30vh;
+    border-radius: 50%;
+    background: #0066CC;
+    filter: blur(10vw);
+    left: -20%;
+    top: 50%;
+    z-index: 5;
+  }
   .vcyb {
     display: none;
   }
@@ -436,6 +445,7 @@ footer .footer_links div {
     width: 100%;
     background: #1E1E1E;
     display: inline-block;
+    overflow: hidden;
   }
   .whyeneida .mimr {
     display: block;
@@ -487,7 +497,7 @@ footer .footer_links div {
     text-align: center;
   }
 }
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   footer .footer_logo {
     padding-left: 1.5rem !important;
   }
@@ -557,7 +567,7 @@ footer .footer_links div {
     padding-left: 1vw;
   }
   .navbar .scll {
-    padding-left: 3vw;
+    padding-left: 1vw;
   }
   .nickboxx {
     margin: 3vh 0.5vw 1vh 0.5vw;
@@ -621,16 +631,9 @@ footer .footer_links div {
   .cdc-3 .col-8 {
     font-size: 23px;
   }
-}
-@media (max-width: 410px) {
-  .navbar {
-    padding-left: 1vw;
-  }
-  .navbar .scll {
-    padding-left: 3vw;
-  }
   .logo-main {
     width: 95px;
+    margin-left: 1.5vw;
   }
 }
 @media (min-width: 1400px) and (max-width: 2560px) and (min-height: 600px) and (max-height: 1115px) {

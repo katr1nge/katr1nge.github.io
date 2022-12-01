@@ -12,8 +12,8 @@ $background_player: 4
 $pg_default: 5em
 $pg_med: 4em
 $pg_phones: 3em
-$gradients: rgba(25, 107, 125, 0.8)
-
+$premium: rgba(25, 107, 125, 0.8)
+$premiumplus: rgba(25, 125, 57, 0.8)
 .container
     max-width: 1800px
 body
@@ -83,6 +83,7 @@ body
     width: 100%
     background: #1E1E1E
     display: inline-block
+    overflow: hidden
     .mimr
         display: flex
 .cdc
@@ -95,18 +96,27 @@ body
         width: 30%
         .col-8
             font-size: 23px
+        &:hover
+            background: #462d21
+            box-shadow: 5px 5px 5px 5px #30221B
     &-2
         background: #222E2D
         display: inline-block
         width: 30%
         .col-8
             font-size: 23px
+        &:hover
+            background: #255855c3
+            box-shadow: 5px 5px 5px 5px #222E2D
     &-3
         background: #2B2022
         display: inline-block
         width: 30%
         .col-8
             font-size: 23px
+        &:hover
+            background: #6137409c
+            box-shadow: 5px 5px 5px 5px #2B2022
 //donate
     //nickbox
 .nickbox
@@ -137,67 +147,40 @@ body
     font-size: 20px
     background: linear-gradient(132.7deg, #343434 -36.64%, #171717 63.62%)
 .doncard
+    width: 250px
+    height: 350px
+    border: 16px solid transparent
+    backdrop-filter: blur(21px)
+    border-radius: 16px
+    background: linear-gradient(152.97deg, rgba(21, 21, 21, 0.2) 0%, rgba(225, 196, 196, 0) 100%)
+    text-align: center
+    font-size: 20px
+    padding-top: 32px
+    .mcblock
+        display: flex
+        justify-content: center
+        padding-top: 21px
+    img
+        width: 144px
+        height: 144px
+        text-align: center
+    .price
+        padding-top: 26px
+        color: rgba(255, 255, 255, 0.75)
+        letter-spacing: 2px
+        font-size: 14px
+    .clicktobuy
+        padding-top: 8px
+        color: rgba(255, 255, 255, 0.75)
+        font-size: 14px
+        text-align: center
+        padding-bottom: 2vw
+    &:hover
+        background: linear-gradient(152.97deg, rgba(61, 61, 61, 0.2) 0%, rgba(225, 196, 196, 0) 100%)
     &-1
-        width: 250px
-        height: 350px
-        background: rgba(0, 48, 15, 1) padding-box, linear-gradient(to right, darkblue, darkorchid) border-box
-        border: 16px solid transparent
-        backdrop-filter: blur(21px)
-        border-radius: 16px
-        text-align: center
-        font-size: 20px
-        padding-top: 32px
-        border: 1px solid $gradients
-        .mcblock
-            display: flex
-            justify-content: center
-            padding-top: 21px
-        img
-            width: 144px
-            height: 144px
-            text-align: center
-        .price
-            padding-top: 26px
-            color: rgba(255, 255, 255, 0.75)
-            letter-spacing: 2px
-            font-size: 14px
-        .clicktobuy
-            padding-top: 8px
-            color: rgba(255, 255, 255, 0.75)
-            font-size: 14px
-            text-align: center
-            padding-bottom: 2vw
+        border: 1px solid $premium
     &-2
-        width: 250px
-        height: 350px
-        background: linear-gradient(152.97deg, rgba(21, 21, 21, 0.2) 0%, rgba(21, 21, 21, 0) 100%)
-        backdrop-filter: blur(21px)
-        border-radius: 16px
-        text-align: center
-        font-size: 20px
-        padding-top: 32px
-        border: 1px solid rgba(25, 125, 57, 0.8)
-        .mcblock
-            display: flex
-            justify-content: center
-            padding-top: 21px
-        img
-            width: 144px
-            height: 144px
-            text-align: center
-        .price
-            padding-top: 26px
-            color: rgba(255, 255, 255, 0.75)
-            letter-spacing: 2px
-            font-size: 14px
-        .clicktobuy
-            padding-top: 8px
-            color: rgba(255, 255, 255, 0.75)
-            font-size: 14px
-            text-align: center
-            padding-bottom: 2vw
-
-    &-2
+        border: 1px solid $premiumplus
 .nb_text
     padding-bottom: 46px
 .input-group .form-control
@@ -329,6 +312,27 @@ footer
 .lhe
     line-height: 1px
 @media (min-width: 521px) and (max-width: 991px)
+    .round
+        &-b
+            position: absolute
+            width: 30vh
+            height: 30vh
+            border-radius: 50%
+            background: #0066CC
+            filter: blur(10vw)
+            left: 0
+            bottom: -15%
+            z-index: 3
+        &-l
+            position: absolute
+            width: 30vh
+            height: 30vh
+            border-radius: 50%
+            background: #0066CC
+            filter: blur(10vw)
+            left: -20%
+            top: 50%
+            z-index: 5
     .vcyb
         display: none
     .welc
@@ -342,6 +346,7 @@ footer
         width: 100%
         background: #1E1E1E
         display: inline-block
+        overflow: hidden
         .mimr
             display: block
     footer 
@@ -381,7 +386,7 @@ footer
             padding-right: 0
         .footer_logo
             text-align: center
-@media (min-width: 769px)
+@media (min-width: 768px)
     footer
         .footer_logo
             padding-left: 1.5rem!important
@@ -446,7 +451,7 @@ footer
     .navbar
         padding-left: 1vw
         .scll
-            padding-left: 3vw
+            padding-left: 1vw
     .nickbox
         &x
             margin: 3vh 0.5vw 1vh 0.5vw
@@ -495,13 +500,9 @@ footer
             display: inline-block
             .col-8
                 font-size: 23px
-@media (max-width: 410px)
-    .navbar
-        padding-left: 1vw
-        .scll
-            padding-left: 3vw
     .logo-main
         width: 95px
+        margin-left: 1.5vw
 @media (min-width: 1400px) and (max-width: 2560px) and (min-height: 600px) and (max-height: 1115px)
     .vcyb
         position: absolute
