@@ -166,14 +166,18 @@ body a:hover {
 
 .nickbox {
   border-width: 1px;
-  border: 2px solid #151515;
+  border: 1px solid rgba(99, 99, 99, 0.337254902);
   border-radius: 16px;
   padding: 2vw 2vw;
   margin: 0 3vw;
   width: auto;
+  max-height: 290px;
 }
 .nickboxx {
   margin: 13vh 0.5vw;
+}
+.nickbox:hover {
+  box-shadow: 0px 0px 5px 5px rgba(99, 99, 99, 0.337254902);
 }
 
 .desc-nick {
@@ -433,6 +437,29 @@ footer .footer_links div {
 
 .lhe {
   line-height: 1px;
+}
+
+.cart__player {
+  -o-object-fit: contain;
+     object-fit: contain;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.userp {
+  vertical-align: top;
+}
+
+.profile-p {
+  display: inline-block;
+}
+
+.avatar {
+  padding-right: 2vw;
+  max-height: 250px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  vertical-align: middle;
 }
 
 @media (min-width: 521px) and (max-width: 991px) {
