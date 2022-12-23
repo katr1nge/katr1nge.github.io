@@ -1,75 +1,874 @@
+@charset "UTF-8";
+@font-face {
+  font-family: e-Ukraine;
+  src: url("//db.onlinewebfonts.com/t/a44207bfe4040f536c824dbbf82f5ed1.ttf") format("truetype");
+}
+@font-face {
+  font-family: benbold;
+  src: url(../fonts/benbold.ttf);
+}
+.container {
+  max-width: 1800px;
+}
 
-body{
-    color:white;
-    background-color: #171717;
+body {
+  color: white;
+  background-color: #171717;
+  font-size: 24px;
+  font-family: e-Ukraine;
+  word-wrap: break-word;
 }
-.bg-vdrk {
-    background-color: #151515;
+body a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
 }
-.bg-vdrl{
-    background: linear-gradient(90.54deg, #1E1E1E 24.35%, #171717 98.17%);
+body a:active {
+  color: white;
 }
-.bg-vdrlg{
-    background-color: #343434;
+body a:hover {
+  color: white;
 }
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 15%;
+  transition: opacity 0.3s ease-out;
+  left: 0;
+  top: 0;
+  blur: 50px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #171717;
+  background-color: #171717;
+}
+
+.modal-header, .modal-body, .modal-footer {
+  border-bottom: 0;
+  border-top: 0;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #000000;
+  margin: auto;
+  padding: 20px;
+  border: 30px solid #ffffff;
+  border-radius: 46px;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.icons {
+  background-size: cover;
+  width: 36px;
+  height: 36px;
+}
+
+.i6 {
+  background-image: url("icons/dicord.svg");
+}
+
+.zif {
+  position: relative;
+  z-index: 5 !important;
+}
+
+.vcyb {
+  display: none;
+}
+
+.shadowtxt {
+  -webkit-text-shadow: 1px 0px 8px rgba(24, 24, 24, 0.07);
+  -moz-text-shadow: 1px 0px 8px rgba(24, 24, 24, 0.07);
+  text-shadow: 1px 0px 8px rgba(24, 24, 24, 0.07);
+}
+
+.eu-b {
+  font-weight: 900;
+}
+
+.logo-main {
+  width: 100px;
+  margin-left: 5vw;
+}
+
+.vect {
+  background-color: #fff;
+}
+
+.bbo {
+  font-family: benbold;
+}
+
+.nav-item {
+  list-style-type: none;
+  display: flex;
+}
+
+.navbar-collapse {
+  color: white;
+  font-size: 18px;
+}
+
+.eneida-socals {
+  width: 100%;
+  height: auto;
+}
+
 .topo {
-    height: 28px;
+  height: 28px;
+  width: 100%;
+}
+
+.bg-vdrk {
+  background-color: #151515;
+}
+
+.bg-vdrpipipi {
+  background-color: #171717;
+}
+
+.bg-vdrl {
+  background: linear-gradient(90.54deg, #1E1E1E 24.35%, #171717 98.17%);
+}
+
+.bg-vdrlg {
+  background-color: #343434;
+}
+
+.bg-vdrl .justify-content-center .scll {
+  background-color: #151515;
+}
+
+.whyeneida {
+  height: auto;
+  width: 100%;
+  background: #1E1E1E;
+  display: inline-block;
+  overflow: hidden;
+}
+.whyeneida .mimr {
+  display: flex;
+}
+
+.cdc {
+  padding-right: 5px;
+  background: #121212;
+}
+.cdc-1 {
+  background: #30221B;
+  flex-wrap: wrap;
+  display: inline-block;
+  width: 30%;
+}
+.cdc-1 .col-8 {
+  font-size: 23px;
+}
+.cdc-1:hover {
+  background: #462d21;
+  box-shadow: 0px 0px 5px 5px #30221B;
+}
+.cdc-2 {
+  background: #222E2D;
+  display: inline-block;
+  width: 30%;
+}
+.cdc-2 .col-8 {
+  font-size: 23px;
+}
+.cdc-2:hover {
+  background: rgba(37, 88, 85, 0.7647058824);
+  box-shadow: 0px 0px 5px 5px #222E2D;
+}
+.cdc-3 {
+  background: #2B2022;
+  display: inline-block;
+  width: 30%;
+}
+.cdc-3 .col-8 {
+  font-size: 23px;
+}
+.cdc-3:hover {
+  background: rgba(97, 55, 64, 0.6117647059);
+  box-shadow: 0px 0px 5px 5px #2B2022;
+}
+
+.desc-nick {
+  max-width: 449px;
+  font-size: 16px;
+  margin: 1% 3vw;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-success {
+  width: 40vw;
+  min-width: 310px;
+  max-width: 603px;
+  border-radius: 26px;
+  background: linear-gradient(132.7deg, #343434 -36.64%, #171717 63.62%);
+}
+
+.donator .col6 {
+  padding: 2vw 2vw;
+}
+
+.donators {
+  height: auto;
+  width: 100%;
+  font-size: 20px;
+}
+
+.neprosri {
+  padding-left: 15%;
+  padding-right: 15%;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.donate-nick {
+  width: clamp(300px, 90vw, 1570px);
+  border: 1px solid white;
+  border-radius: 46px;
+  padding: 53px 10px 53px 10px;
+}
+.donate-nick .username {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+.donate-nick input[type=text] {
+  color: #fff;
+  background-image: url("https://minecraftfaces.com/wp-content/bigfaces/big-steve-face.png");
+  background-size: auto 80%;
+  background-repeat: no-repeat;
+  max-width: 90%;
+  padding: 5px 3px;
+  border: 0;
+  padding-left: 120px;
+  transition: 0.3s;
+  background-position: clamp(6px, 4vw, 47px);
+  outline: none;
+  font-size: 16px;
+  margin-right: -4px;
+}
+.donate-nick button[type=submit] {
+  background-color: rgb(23, 179, 132);
+  margin-left: -4px;
+  color: white;
+  outline: none;
+  border: none;
+  height: 59px;
+  margin-top: 0;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  border-radius: 0px 32px 32px 0px;
+}
+.donate-nick .nick {
+  width: clamp(310px, 60vw, 1292px);
+  height: 59px;
+  background: #373737;
+  border-radius: 32px 0px 0px 32px;
+}
+.donate-nick .headtxt {
+  font-size: clamp(16px, 7vw, 32px);
+  line-height: 38px;
+  padding-bottom: 20px;
+}
+
+.future {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 19px;
+  padding: 45px 10px 0px 10px;
+}
+
+.doncard {
+  width: 470px;
+  height: auto;
+  max-width: 90%;
+  border: 16px solid transparent;
+  -webkit-backdrop-filter: blur(21px);
+          backdrop-filter: blur(21px);
+  border-radius: 16px;
+  background: linear-gradient(152.97deg, rgba(21, 21, 21, 0.2) 0%, rgba(225, 196, 196, 0) 100%);
+  text-align: center;
+  font-size: 20px;
+  padding-top: 31px;
+  padding-bottom: 31px;
+  font-feature-settings: "ordn" on, "ss04" on;
+  letter-spacing: 0.04em;
+  line-height: 22px;
+}
+.doncard .dondesc {
+  padding: 0px 24px 0px 0px;
+  font-size: 18px;
+  padding-top: 18px;
+  line-height: 1.5;
+}
+.doncard .dondesc .donp {
+  list-style-type: "– ";
+  list-style-position: inside;
+}
+.doncard .dondesc .donp .sub {
+  list-style-type: square;
+}
+.doncard .mcblock {
+  display: flex;
+  justify-content: center;
+  padding-top: 21px;
+}
+.doncard img {
+  width: 144px;
+  height: 144px;
+  text-align: center;
+}
+.doncard .price {
+  padding-top: 26px;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+.doncard .clicktobuy {
+  padding-top: 8px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+  text-align: center;
+  padding-bottom: 2vw;
+}
+
+.donbutton {
+  width: 200px;
+  margin: 10px 0px 0px 0px;
+  min-width: 200px;
+  padding: 8px 10px 8px 10px;
+  font-size: 18px;
+}
+.donbutton-1 {
+  border: 1px solid rgba(69, 56, 211, 0.8);
+}
+.donbutton-1:hover {
+  box-shadow: 0px 0px 40px 0.1px rgba(69, 56, 211, 0.8);
+}
+.donbutton-1 .doncolor {
+  color: rgb(0, 102, 204);
+}
+.donbutton-1 .dongray {
+  color: rgba(255, 255, 255, 0.6);
+}
+.donbutton-2 {
+  border: 1px solid rgba(25, 125, 57, 0.8);
+}
+.donbutton-2:hover {
+  box-shadow: 0px 0px 40px 0.1px rgba(25, 125, 57, 0.481);
+}
+.donbutton-2 .doncolor {
+  color: rgb(74, 231, 118);
+}
+.donbutton-2 .dongray {
+  color: rgba(255, 255, 255, 0.6);
+}
+.donbutton-3 {
+  border: 1px solid rgba(161, 43, 153, 0.6);
+}
+.donbutton-3:hover {
+  box-shadow: 0px 0px 40px 0.1px rgba(161, 43, 153, 0.481);
+}
+
+.nb_text {
+  padding-bottom: 46px;
+}
+
+.input-group .form-control {
+  background-color: #373737;
+  flex: none;
+  color: white;
+  border: 0;
+  border-radius: 26px;
+  margin: 5vh 0 0vh 0;
+  width: 40vw;
+  min-width: 310px;
+  max-width: 603px;
+  height: 41px;
+}
+
+.desc-don {
+  color: rgba(255, 255, 255, 0.5);
+  padding-top: 13vh;
+}
+
+.second-text {
+  color: rgb(167, 167, 167);
+}
+
+.cardsss {
+  border-radius: 16px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.ultracrutchbutok {
+  width: 99%;
+  padding-left: 1rem;
+}
+
+.textbar-1 {
+  position: relative;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.section-title {
+  height: auto;
+  font-size: 36px;
+  letter-spacing: 2px;
+}
+
+.section-subtitle {
+  height: auto;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.scll {
+  height: 20%;
+}
+
+.socials-but {
+  height: auto;
+}
+.socials-but .socials {
+  flex-direction: row;
+  display: flex;
+}
+.socials-but .scll {
+  width: 20%;
+  height: 20%;
+}
+
+.welc {
+  background: url("https://raw.githubusercontent.com/katr1nge/images/main/ua-skin.png"), url("https://raw.githubusercontent.com/katr1nge/images/main/background.png");
+  background-repeat: no-repeat;
+  height: auto;
+  background-size: 50%, cover;
+  position: relative;
+  background-position: right, right;
+}
+.welc .zifs {
+  position: relative;
+  z-index: 6;
+  padding-left: 5vw;
+}
+.welc .rough {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+}
+.welc img {
+  overflow: hidden;
+  float: right;
+}
+.welc .ip {
+  margin: clamp(1px, 2vh, 24px) 1vw clamp(1px, 2vh, 24px) 0vw;
+  color: white;
+  font-size: clamp(15px, 2vw, 24px);
+  background: #151515;
+  border: 5px solid #FFFFFF;
+  padding: clamp(2px, 1vh, 16px) clamp(2px, 2vw, 24px);
+  transition: all 0.5s;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  -webkit-mask-image: -webkit-radial-gradient(#000, linear-gradient(90deg, #FFD500 0%, #0066CC 98.72%));
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+}
+.welc .ip:hover {
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  background: linear-gradient(90deg, #FFD500 0%, #0066CC 98.72%);
+  color: #000;
+  transition: transform 0.2s ease;
+}
+.welc .ip:hover:before {
+  --progress: 0;
+}
+.welc .eukr {
+  font-family: e-Ukraine;
+}
+.welc .headtxt {
+  font-size: clamp(24px, 3vw, 48px);
+  padding-top: clamp(12px, 12vh, 280px);
+}
+.welc .eneida-version {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1vw;
+  font-size: clamp(14px, 1vw, 18px);
+  letter-spacing: 0.2em;
+  padding-bottom: clamp(12px, 10vh, 216px);
+}
+.welc .round1 {
+  background-color: #fff;
+  width: 100;
+  height: 100px;
+  top: 200px;
+  position: absolute;
+}
+
+.subtext {
+  padding-top: clamp(1px, 5vh, 10px);
+}
+.subtext-welc {
+  padding-right: 55vw;
+  font-size: clamp(10px, 1.5vw, 20px);
+}
+.subtext-promo {
+  line-height: 19px;
+  font-size: 16px;
+  padding: clamp(1px, 5vh, 10px) 10% 0px 10%;
+}
+.subtext-dnick {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+.notify-green {
+  background-color: #4AE776;
+  color: #000;
+  font-size: 14px;
+  padding: 10px 10px 10px 10px;
+}
+
+.btn, .btn:hover, .btn:focus {
+  width: 230px;
+  height: 50px;
+  margin-top: 26px;
+  border-color: #17B384;
+  color: white;
+  background: #17B384;
+  border-radius: 13px;
+  font-size: 24px;
+}
+
+.promo {
+  width: 100%;
+  padding-bottom: clamp(12px, 25vh, 120px);
+}
+.promo .headtxt {
+  font-size: clamp(16px, 7vw, 36px);
+  padding-top: clamp(12px, 12vh, 280px);
+  line-height: 38px;
+}
+.promo-don {
+  background-image: url("https://raw.githubusercontent.com/katr1nge/images/main/promotion-donate.png");
+  background-size: cover;
+}
+
+footer {
+  height: 174px;
+  font-size: 14px;
+}
+footer .footer_links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: right;
+  text-align: left;
+  font-size: clamp(10px, 1.35vw, 20px);
+}
+footer .footer_links div {
+  display: inline-block;
+  padding-right: 4vw;
+}
+
+.space-text {
+  letter-spacing: 3px;
+}
+
+.lhe {
+  line-height: 1px;
+}
+
+@media (min-width: 521px) and (max-width: 991px) {
+  .round-b {
+    position: absolute;
+    width: 30vh;
+    height: 30vh;
+    border-radius: 50%;
+    background: #0066CC;
+    filter: blur(10vw);
+    left: 0;
+    bottom: -15%;
+    z-index: 3;
+  }
+  .round-l {
+    position: absolute;
+    width: 30vh;
+    height: 30vh;
+    border-radius: 50%;
+    background: #0066CC;
+    filter: blur(10vw);
+    left: -20%;
+    top: 50%;
+    z-index: 5;
+  }
+  .vcyb {
+    display: none;
+  }
+  .welc {
+    background-image: url("https://raw.githubusercontent.com/katr1nge/images/main/background.png");
+    background-repeat: no-repeat;
+    height: auto;
     width: 100%;
-}
-.scll path {
-    scale: 80%;
-    height: 80%;
-}
-.welc{
-    background-image: url("../img/Backg.png");
-    height: 100vh;
-	background-size: cover;
-	background-position: center center;
-}
-.socials{
-    flex-direction: row;
-}
-.textbar-1{
-    position: relative;
-    min-width: 100%;
-    max-width: 100%;
-}
-.whyeneida2{
-    height: 90px;
-}
-.donate{
-    font-size: 24px;
-}
-.footeer{
-    font-size: 14px;
-}
-.bg-vdrl .justify-content-center .scll{
-    background-color: #151515;
-}
-.donators{
-    height: 695px;
+    background-size: cover;
+  }
+  .whyeneida {
+    height: auto;
     width: 100%;
-    background: linear-gradient(132.7deg, #343434 -36.64%, #171717 63.62%);
-}
-.whyeneida{
-    height: 377px;
     background: #1E1E1E;
+    display: inline-block;
+    overflow: hidden;
+  }
+  .whyeneida .mimr {
+    display: block;
+  }
+  footer .footer_links {
+    text-align: center;
+  }
+  .cdc {
+    padding-right: 5px;
+    background: #121212;
+  }
+  .cdc-1 {
+    background: #30221B;
+    flex-wrap: wrap;
+    display: inline-block;
+    margin-bottom: 5px;
+    width: 500px;
+  }
+  .cdc-1 .col-8 {
+    font-size: 23px;
+  }
+  .cdc-2 {
+    background: #222E2D;
+    margin-bottom: 5px;
+    display: inline-block;
+    width: 500px;
+  }
+  .cdc-2 .col-8 {
+    font-size: 23px;
+  }
+  .cdc-3 {
+    background: #2B2022;
+    margin-bottom: 5px;
+    display: inline-block;
+    width: 500px;
+    margin: 0 auto;
+  }
+  .cdc-3 .col-8 {
+    font-size: 23px;
+  }
 }
-footer{
-    height: 174px;
+@media (max-width: 767px) {
+  .donbutton-1:hover {
+    box-shadow: 0px 0px 20px 0.1px rgba(25, 107, 125, 0.8);
+  }
+  .donbutton-2:hover {
+    box-shadow: 0px 0px 20px 0.1px rgba(25, 125, 57, 0.481);
+  }
+  .donbutton-3:hover {
+    box-shadow: 0px 0px 20px 0.1px rgba(161, 43, 153, 0.481);
+  }
+  footer .footer_links {
+    text-align: center;
+    font-size: clamp(16px, 3vw, 48px);
+    padding-right: 0;
+  }
+  footer .footer_logo {
+    text-align: center;
+  }
 }
-.cardsss{
-border-radius: 16px;
-width: 100%;
-height: 274px;
-font-size: 20px;
+@media (min-width: 768px) {
+  footer .footer_logo {
+    padding-left: 1.5rem !important;
+  }
 }
-.cdc-1{
-background: #30221B;
+@media (min-width: 992px) {
+  .cdc-1 {
+    max-width: 545px;
+    max-height: 274px;
+  }
+  .cdc-2 {
+    max-width: 545px;
+    max-height: 274px;
+  }
+  .cdc-3 {
+    max-width: 545px;
+    max-height: 274px;
+  }
+  .round-b {
+    position: absolute;
+    width: 316px;
+    height: 316px;
+    border-radius: 50%;
+    background: #0066CC;
+    filter: blur(137px);
+    left: 0;
+    bottom: -15%;
+    z-index: 3;
+  }
+  .round-l {
+    position: absolute;
+    width: 316px;
+    height: 316px;
+    border-radius: 50%;
+    background: #0066CC;
+    filter: blur(137px);
+    left: -20%;
+    top: 50%;
+    z-index: 5;
+  }
 }
-.cdc-2{
-background: #222E2D;
+@media (max-width: 520px) {
+  .round-b {
+    position: absolute;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    background: #0066CC;
+    filter: blur(37px);
+    right: -10%;
+    overflow: hidden;
+    bottom: 20%;
+    z-index: 2;
+  }
+  .round-l {
+    position: absolute;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    background: #FFD700;
+    filter: blur(37px);
+    left: -10%;
+    overflow: hidden;
+    top: 20%;
+    z-index: 2;
+  }
+  .navbar {
+    padding-left: 1vw;
+  }
+  .navbar .scll {
+    padding-left: 1vw;
+  }
+  .nickboxx {
+    margin: 3vh 0.5vw 1vh 0.5vw;
+  }
+  .vcyb {
+    display: none;
+  }
+  .welc {
+    background-image: url("https://raw.githubusercontent.com/katr1nge/images/main/background.png");
+    background-repeat: no-repeat;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    background-size: cover;
+  }
+  .welc .headtxt {
+    font-size: 8vw;
+  }
+  .welc .subtext-welc {
+    font-size: 4vw;
+    padding-right: 25vw;
+  }
+  .welc .eneida-version {
+    font-size: 2vw;
+  }
+  .whyeneida {
+    height: auto;
+    width: 100%;
+    background: #1E1E1E;
+    display: inline-block;
+  }
+  .whyeneida .mimr {
+    display: block;
+  }
+  .cdc {
+    padding-right: 5px;
+    background: #121212;
+  }
+  .cdc-1 {
+    background: #30221B;
+    flex-wrap: wrap;
+    display: inline-block;
+    margin-bottom: 2vh;
+  }
+  .cdc-1 .col-8 {
+    font-size: 23px;
+  }
+  .cdc-2 {
+    background: #222E2D;
+    margin-bottom: 2vh;
+    display: inline-block;
+  }
+  .cdc-2 .col-8 {
+    font-size: 23px;
+  }
+  .cdc-3 {
+    background: #2B2022;
+    margin-bottom: 2vh;
+    display: inline-block;
+  }
+  .cdc-3 .col-8 {
+    font-size: 23px;
+  }
+  .logo-main {
+    width: 95px;
+    margin-left: 1.5vw;
+  }
 }
-.cdc-3{
-background: #2B2022;
+@media (min-width: 1300px) and (max-width: 3560px) and (min-height: 600px) and (max-height: 3100px) {
+  .vcyb {
+    position: absolute;
+    display: inline;
+    width: auto;
+    z-index: 4;
+    top: 0px;
+    left: -35px;
+  }
+  .logo-main {
+    width: 100px;
+    margin-left: 115px;
+  }
 }
+@media (min-width: 1600px) and (min-height: 700px) {
+  .welc {
+    background-size: 80vh, cover;
+  }
+  .navbar-nav {
+    padding-right: clamp(1px, 3vw, 110px);
+  }
+}/*# sourceMappingURL=style copy.css.map */

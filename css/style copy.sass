@@ -3,8 +3,8 @@
   font-family: e-Ukraine
   src: url("//db.onlinewebfonts.com/t/a44207bfe4040f536c824dbbf82f5ed1.ttf") format("truetype")
 @font-face 
-  font-family: "benbold"
-  src: url('//minetap.xyz/benbold.ttf') format('truetype')
+  font-family: benbold
+  src: url(../fonts/benbold.ttf)
 @function get-vw($target) 
   $vw-context: (1000*.01) * 1px
   @return ($target/$vw-context) * 1vw
@@ -39,11 +39,12 @@ body
   transition: opacity 0.3s ease-out
   left: 0
   top: 0
+  blur: 50px
   width: 100% /* Full width */
   height: 100% /* Full height */
   overflow: auto /* Enable scroll if needed */
   background-color: #171717 /* Fallback color */
-  background-color: #171717d0 /* Black w/ opacity */
+  background-color: #171717 /* Black w/ opacity */
 .modal-header, .modal-body, .modal-footer
     border-bottom: 0
     border-top: 0
@@ -53,14 +54,13 @@ body
   background-color: #000000
   margin: auto
   padding: 20px
-  border: 3px solid #ffffff5c
+  border: 30px solid #ffffff
   border-radius: 46px
-  width: clamp(270px, 95vw, 1570px)
-  max-height: 100%
+  width: 80%
 
 
 /* The Close Button */
-.close
+.close 
   color: #aaaaaa
   float: right
   font-size: 28px
@@ -69,6 +69,7 @@ body
 
 .close:hover,
 .close:focus 
+  color: #000
   text-decoration: none
   cursor: pointer
 
@@ -199,6 +200,10 @@ body
     padding-right: 15%
     color: rgba(255,255,255,0.6)
 .donate-nick
+    width: clamp(300px, 90vw, 1570px)
+    border: 1px solid white
+    border-radius: 46px
+    padding: 53px 10px 53px 10px
     .username
         padding-top: 36px
         padding-bottom: 36px
@@ -549,15 +554,6 @@ footer
             .col-8
                 font-size: 23px
 @media (max-width: 767px)
-    .donate-nick
-        input[type="text"]
-            background-image: none
-            padding-left: 10%
-            transition:0.3s
-            outline: none
-            font-size: 12px
-            margin-left: 4%
-
     .donbutton
         &-1:hover
             box-shadow: 0px 0px 20px 0.1px rgba(25, 107, 125, 0.8)
@@ -611,18 +607,6 @@ footer
             z-index: 5
 //phones fix
 @media (max-width: 520px)
-    .donate-nick
-        input[type="text"]
-            border-radius: 16px
-            margin:0
-            width: clamp(250px, 80vw, 470px)
-        button[type="submit"]
-            border-radius: 16px
-            margin:0
-            margin-top: 1vh
-            width: clamp(250px, 76vw, 470px)
-        .neprosri
-            font-size: 14px
     .round
         &-b
             position: absolute

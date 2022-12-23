@@ -1,11 +1,11 @@
-@import url(//db.onlinewebfonts.com/c/a44207bfe4040f536c824dbbf82f5ed1?family=e-Ukraine);
+@charset "UTF-8";
 @font-face {
   font-family: e-Ukraine;
   src: url("//db.onlinewebfonts.com/t/a44207bfe4040f536c824dbbf82f5ed1.ttf") format("truetype");
 }
 @font-face {
-  font-family: benbold;
-  src: url(../fonts/benbold.ttf);
+  font-family: "benbold";
+  src: url("//minetap.xyz/benbold.ttf") format("truetype");
 }
 .container {
   max-width: 1800px;
@@ -27,6 +27,51 @@ body a:active {
 }
 body a:hover {
   color: white;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 15%;
+  transition: opacity 0.3s ease-out;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #171717;
+  background-color: rgba(23, 23, 23, 0.8156862745);
+}
+
+.modal-header, .modal-body, .modal-footer {
+  border-bottom: 0;
+  border-top: 0;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #000000;
+  margin: auto;
+  padding: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3607843137);
+  border-radius: 46px;
+  width: clamp(270px, 95vw, 1570px);
+  max-height: 100%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .icons {
@@ -164,22 +209,6 @@ body a:hover {
   box-shadow: 0px 0px 5px 5px #2B2022;
 }
 
-.nickbox {
-  border-width: 1px;
-  border: 1px solid rgba(99, 99, 99, 0.337254902);
-  border-radius: 16px;
-  padding: 2vw 2vw;
-  margin: 0 3vw;
-  width: auto;
-  max-height: 290px;
-}
-.nickboxx {
-  margin: 13vh 0.5vw;
-}
-.nickbox:hover {
-  box-shadow: 0px 0px 5px 5px rgba(99, 99, 99, 0.337254902);
-}
-
 .desc-nick {
   max-width: 449px;
   font-size: 16px;
@@ -203,12 +232,69 @@ body a:hover {
   height: auto;
   width: 100%;
   font-size: 20px;
-  background: linear-gradient(132.7deg, #343434 -36.64%, #171717 63.62%);
+}
+
+.neprosri {
+  padding-left: 15%;
+  padding-right: 15%;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.donate-nick .username {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+.donate-nick input[type=text] {
+  color: #fff;
+  background-image: url("https://minecraftfaces.com/wp-content/bigfaces/big-steve-face.png");
+  background-size: auto 80%;
+  background-repeat: no-repeat;
+  max-width: 90%;
+  padding: 5px 3px;
+  border: 0;
+  padding-left: 120px;
+  transition: 0.3s;
+  background-position: clamp(6px, 4vw, 47px);
+  outline: none;
+  font-size: 16px;
+  margin-right: -4px;
+}
+.donate-nick button[type=submit] {
+  background-color: rgb(23, 179, 132);
+  margin-left: -4px;
+  color: white;
+  outline: none;
+  border: none;
+  height: 59px;
+  margin-top: 0;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  border-radius: 0px 32px 32px 0px;
+}
+.donate-nick .nick {
+  width: clamp(310px, 60vw, 1292px);
+  height: 59px;
+  background: #373737;
+  border-radius: 32px 0px 0px 32px;
+}
+.donate-nick .headtxt {
+  font-size: clamp(16px, 7vw, 32px);
+  line-height: 38px;
+  padding-bottom: 20px;
+}
+
+.future {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 19px;
+  padding: 45px 10px 0px 10px;
 }
 
 .doncard {
-  width: 250px;
-  height: 350px;
+  width: 470px;
+  height: auto;
+  max-width: 90%;
   border: 16px solid transparent;
   -webkit-backdrop-filter: blur(21px);
           backdrop-filter: blur(21px);
@@ -216,7 +302,24 @@ body a:hover {
   background: linear-gradient(152.97deg, rgba(21, 21, 21, 0.2) 0%, rgba(225, 196, 196, 0) 100%);
   text-align: center;
   font-size: 20px;
-  padding-top: 32px;
+  padding-top: 31px;
+  padding-bottom: 31px;
+  font-feature-settings: "ordn" on, "ss04" on;
+  letter-spacing: 0.04em;
+  line-height: 22px;
+}
+.doncard .dondesc {
+  padding: 0px 24px 0px 0px;
+  font-size: 18px;
+  padding-top: 18px;
+  line-height: 1.5;
+}
+.doncard .dondesc .donp {
+  list-style-type: "– ";
+  list-style-position: inside;
+}
+.doncard .dondesc .donp .sub {
+  list-style-type: square;
 }
 .doncard .mcblock {
   display: flex;
@@ -230,7 +333,7 @@ body a:hover {
 }
 .doncard .price {
   padding-top: 26px;
-  color: rgba(255, 255, 255, 0.75);
+  color: white;
   letter-spacing: 2px;
   font-size: 14px;
 }
@@ -241,9 +344,6 @@ body a:hover {
   text-align: center;
   padding-bottom: 2vw;
 }
-.doncard:hover {
-  background: linear-gradient(152.97deg, rgba(61, 61, 61, 0.2) 0%, rgba(225, 196, 196, 0) 100%);
-}
 
 .donbutton {
   width: 200px;
@@ -253,16 +353,28 @@ body a:hover {
   font-size: 18px;
 }
 .donbutton-1 {
-  border: 1px solid rgba(25, 107, 125, 0.8);
+  border: 1px solid rgba(69, 56, 211, 0.8);
 }
 .donbutton-1:hover {
-  box-shadow: 0px 0px 40px 0.1px rgba(25, 107, 125, 0.8);
+  box-shadow: 0px 0px 40px 0.1px rgba(69, 56, 211, 0.8);
+}
+.donbutton-1 .doncolor {
+  color: rgb(0, 102, 204);
+}
+.donbutton-1 .dongray {
+  color: rgba(255, 255, 255, 0.6);
 }
 .donbutton-2 {
   border: 1px solid rgba(25, 125, 57, 0.8);
 }
 .donbutton-2:hover {
   box-shadow: 0px 0px 40px 0.1px rgba(25, 125, 57, 0.481);
+}
+.donbutton-2 .doncolor {
+  color: rgb(74, 231, 118);
+}
+.donbutton-2 .dongray {
+  color: rgba(255, 255, 255, 0.6);
 }
 .donbutton-3 {
   border: 1px solid rgba(161, 43, 153, 0.6);
@@ -343,7 +455,7 @@ body a:hover {
 }
 
 .welc {
-  background: url("../img/ua-skin.png"), url("../img/background.png");
+  background: url("https://raw.githubusercontent.com/katr1nge/images/main/ua-skin.png"), url("https://raw.githubusercontent.com/katr1nge/images/main/background.png");
   background-repeat: no-repeat;
   height: auto;
   background-size: 50%, cover;
@@ -365,15 +477,6 @@ body a:hover {
   overflow: hidden;
   float: right;
 }
-.welc .headtxt {
-  font-size: clamp(24px, 3vw, 48px);
-  padding-top: clamp(12px, 12vh, 280px);
-}
-.welc .subtext-welc {
-  padding-top: clamp(1px, 5vh, 10px);
-  padding-right: 55vw;
-  font-size: clamp(10px, 1.5vw, 20px);
-}
 .welc .ip {
   margin: clamp(1px, 2vh, 24px) 1vw clamp(1px, 2vh, 24px) 0vw;
   color: white;
@@ -385,10 +488,16 @@ body a:hover {
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: button;
   -webkit-mask-image: -webkit-radial-gradient(#000, linear-gradient(90deg, #FFD500 0%, #0066CC 98.72%));
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
 }
 .welc .ip:hover {
-  -webkit-animation: stripes 0.75s infinite linear;
-          animation: stripes 0.75s infinite linear;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
   background: linear-gradient(90deg, #FFD500 0%, #0066CC 98.72%);
   color: #000;
   transition: transform 0.2s ease;
@@ -398,6 +507,10 @@ body a:hover {
 }
 .welc .eukr {
   font-family: e-Ukraine;
+}
+.welc .headtxt {
+  font-size: clamp(24px, 3vw, 48px);
+  padding-top: clamp(12px, 12vh, 280px);
 }
 .welc .eneida-version {
   color: rgba(255, 255, 255, 0.75);
@@ -412,6 +525,59 @@ body a:hover {
   height: 100px;
   top: 200px;
   position: absolute;
+}
+
+.subtext {
+  padding-top: clamp(1px, 5vh, 10px);
+}
+.subtext-welc {
+  padding-right: 55vw;
+  font-size: clamp(10px, 1.5vw, 20px);
+}
+.subtext-promo {
+  line-height: 19px;
+  font-size: 16px;
+  padding: clamp(1px, 5vh, 10px) 10% 0px 10%;
+}
+.subtext-dnick {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+.notify-green {
+  background-color: #4AE776;
+  color: #000;
+  font-size: 14px;
+  padding: 10px 10px 10px 10px;
+}
+
+.btn, .btn:hover, .btn:focus {
+  width: 230px;
+  height: 50px;
+  margin-top: 26px;
+  border-color: #17B384;
+  color: white;
+  background: #17B384;
+  border-radius: 13px;
+  font-size: 24px;
+}
+
+.promo {
+  width: 100%;
+  padding-bottom: clamp(12px, 25vh, 120px);
+}
+.promo .headtxt {
+  font-size: clamp(16px, 7vw, 36px);
+  padding-top: clamp(12px, 12vh, 280px);
+  line-height: 38px;
+}
+.promo-don {
+  background-image: url("https://raw.githubusercontent.com/katr1nge/images/main/promotion-donate.png");
+  background-size: cover;
 }
 
 footer {
@@ -437,29 +603,6 @@ footer .footer_links div {
 
 .lhe {
   line-height: 1px;
-}
-
-.cart__player {
-  -o-object-fit: contain;
-     object-fit: contain;
-  vertical-align: middle;
-  display: inline-block;
-}
-
-.userp {
-  vertical-align: top;
-}
-
-.profile-p {
-  display: inline-block;
-}
-
-.avatar {
-  padding-right: 2vw;
-  max-height: 250px;
-  -o-object-fit: contain;
-     object-fit: contain;
-  vertical-align: middle;
 }
 
 @media (min-width: 521px) and (max-width: 991px) {
@@ -489,7 +632,7 @@ footer .footer_links div {
     display: none;
   }
   .welc {
-    background-image: url("../img/background.png");
+    background-image: url("https://raw.githubusercontent.com/katr1nge/images/main/background.png");
     background-repeat: no-repeat;
     height: auto;
     width: 100%;
@@ -543,6 +686,14 @@ footer .footer_links div {
   }
 }
 @media (max-width: 767px) {
+  .donate-nick input[type=text] {
+    background-image: none;
+    padding-left: 10%;
+    transition: 0.3s;
+    outline: none;
+    font-size: 12px;
+    margin-left: 4%;
+  }
   .donbutton-1:hover {
     box-shadow: 0px 0px 20px 0.1px rgba(25, 107, 125, 0.8);
   }
@@ -603,6 +754,20 @@ footer .footer_links div {
   }
 }
 @media (max-width: 520px) {
+  .donate-nick input[type=text] {
+    border-radius: 16px;
+    margin: 0;
+    width: clamp(250px, 80vw, 470px);
+  }
+  .donate-nick button[type=submit] {
+    border-radius: 16px;
+    margin: 0;
+    margin-top: 1vh;
+    width: clamp(250px, 76vw, 470px);
+  }
+  .donate-nick .neprosri {
+    font-size: 14px;
+  }
   .round-b {
     position: absolute;
     width: 20vw;
@@ -640,7 +805,7 @@ footer .footer_links div {
     display: none;
   }
   .welc {
-    background-image: url("../img/background.png");
+    background-image: url("https://raw.githubusercontent.com/katr1nge/images/main/background.png");
     background-repeat: no-repeat;
     height: auto;
     width: 100%;
@@ -712,5 +877,13 @@ footer .footer_links div {
   .logo-main {
     width: 100px;
     margin-left: 115px;
+  }
+}
+@media (min-width: 1600px) and (min-height: 700px) {
+  .welc {
+    background-size: 80vh, cover;
+  }
+  .navbar-nav {
+    padding-right: clamp(1px, 3vw, 110px);
   }
 }/*# sourceMappingURL=style.css.map */
